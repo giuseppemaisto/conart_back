@@ -23,6 +23,11 @@ class User extends Authenticatable
         'password',
     ];
 
+
+    public function quadri()
+    {
+        return $this->hasMany(Quadro::class);
+    }
     /**
      * Gli attributi che dovrebbero essere nascosti per gli array.
      *

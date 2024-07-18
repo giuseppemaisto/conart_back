@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\Api\ArtistaApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,3 +21,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Aggiungi la tua rotta API qui
 Route::get('/users', [UserController::class, 'index']);
+
+
+// routes/api.php
+
+Route::get('/artisti', [ArtistaController::class, 'index']);
+
+Route::get('/artisti', [ArtistaApiController::class, 'index']);
